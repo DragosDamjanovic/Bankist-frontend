@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  &:root {
+    --heights: 100vh;
+    --widths: calc(100% - 473px);
+  }
+  font-family: "Roboto", sans-serif;
+}
+
+.slider_container {
+  height: var(--heights);
+  width: var(--widths);
+  position: fixed;
+  float: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+  overflow: hidden;
+  &:hover {
+    .prev {
+      color: black;
+      &:hover {
+        color: white;
+        background-color: rgba(0, 0, 0, 0.6);
+        transition: all 0.5s ease-in;
+      }
+    }
+    .next {
+      color: black;
+      &:hover {
+        color: white;
+        background-color: rgba(0, 0, 0, 0.6);
+        transition: all 0.5s ease-in;
+      }
+    }
+    .dot {
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .active_dot {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+.active {
+  display: inline-block;
+}
+.inactive {
+  display: none;
+}
+.slides {
+  height: var(--heights);
+  width: var(--widths);
+  position: relative;
+}
+.slide_image {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  object-fit: cover;
+}
+
+.headline {
+  width: 100%;
+  position: relative;
+  top: 40%;
+  padding-left: 130px;
+  z-index: 10;
+
+  .slide_title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: white;
+    font-size: 50px;
+    z-index: 10;
+  }
+  .slide_text {
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    color: white;
+    font-size: 24px;
+    padding-right: 20%;
+    margin-bottom: 40px;
+    z-index: 10;
+  }
+}
+
+.all_dots {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  top: 85%;
+  justify-content: center;
+  z-index: 200;
+}
+.dot {
+  cursor: pointer;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 0px 3px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+}
+.play_pause {
+  color: black;
+}
+
+@media screen and (max-width: 900px) {
+  .slider_container {
+    width: 100%;
+    height: 350px;
+    float: none;
+    padding: 0;
+    position: inherit;
+
+    .slides {
+      min-height: 350px;
+
+      .headline {
+        top: 40px;
+        padding-left: 60px;
+        padding-right: 60px;
+
+        .slide_title {
+          font-size: 42px;
+        }
+        .slide_text {
+          padding-right: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

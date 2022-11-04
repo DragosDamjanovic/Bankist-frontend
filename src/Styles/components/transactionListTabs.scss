@@ -1,0 +1,310 @@
+$mainColor: #3d5a80;
+$secondary: #98c1d9;
+$liteblue: #e0fbfc;
+$orange: #ee6c4d;
+$dark: #293241;
+
+.mt-4 {
+  font-family: "Roboto", sans-serif;
+  .logout {
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+    .btn-logout {
+      width: 80px;
+      font-size: 17px;
+      color: #ababab;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .icon {
+      vertical-align: middle;
+      padding-left: 5px;
+      width: 17px;
+      height: 22px;
+      color: #ababab;
+    }
+  }
+  .acc-section {
+    .row {
+      .account {
+        background-color: #c0c0c0c0;
+        height: 100%;
+        position: relative;
+        z-index: 10;
+        background-color: #ebebeb;
+        padding: 10px 50px 5px 15px;
+        border-bottom: 3px solid #dfdfdf;
+
+        .acc-title {
+          font-size: 30px;
+          font-weight: 300;
+          color: #545454;
+          margin-bottom: 5px;
+        }
+
+        .acc-num {
+          font-size: 12px;
+          font-weight: 500;
+          color: #9c9c9c;
+          margin-bottom: 0;
+          text-transform: uppercase;
+        }
+      }
+
+      .balance-widget {
+        zoom: 1;
+        position: relative;
+        padding-top: 10px;
+
+        .available-balance,
+        .current-balance {
+          float: left;
+          width: 50%;
+          padding-right: 15px;
+          font-size: 40px;
+          font-weight: 300;
+          text-transform: uppercase;
+          color: #9c9c9c;
+          text-align: right;
+          line-height: 15px;
+          border-right: 1px solid #d7d7d7;
+          margin: 0;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          height: 60px;
+
+          span {
+            display: block;
+            font-size: 12px;
+            font-weight: 500;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+
+    .details {
+      .btn-details {
+        margin-top: 20%;
+        border-radius: 50%;
+        backface-visibility: hidden;
+        display: block;
+        margin: auto;
+        color: $mainColor;
+        width: 85px;
+        height: 70px;
+      }
+    }
+  }
+
+  .last-transactions {
+    position: relative;
+    z-index: 300;
+
+    .tab-container {
+      position: relative;
+      min-width: 100%;
+
+      .tab {
+        .group {
+          .group-inner {
+            margin-bottom: 15px;
+
+            .label-1 {
+              display: block;
+              font-size: 14px;
+              color: #9c9c9c;
+              margin-bottom: 5px;
+            }
+
+            .input-1 {
+              display: block;
+              width: 100%;
+              outline: none;
+              font-size: 16px;
+              font-weight: 400;
+              color: #000;
+              padding: 10px;
+              border-radius: 3px;
+              border: none;
+              background-color: #e0e0e0;
+            }
+          }
+
+          .btn-inner {
+            position: relative;
+            height: 100%;
+            min-height: 30px;
+
+            a {
+              position: absolute;
+              min-width: 100px;
+              width: 100%;
+              display: block;
+              top: calc(25% + 5px);
+              padding-left: 0;
+              padding-right: 0;
+              background-color: $orange;
+              color: white;
+              font-weight: 400;
+              border-radius: 20px;
+            }
+          }
+        }
+
+        .costum-table {
+          .table-header {
+            background-color: #f6f8f2;
+            border-bottom: 1px solid #d9d9d9;
+
+            .col-lg-2,
+            .col-lg-8 {
+              height: 35px;
+              p {
+                font-size: 12px;
+                text-transform: uppercase;
+                font-weight: 700;
+                line-height: 35px;
+
+                .icon {
+                  vertical-align: middle;
+                  padding-left: 5px;
+                  width: 12px;
+                  height: 16px;
+                }
+              }
+            }
+          }
+
+          .table-row {
+            height: 54px;
+
+            .amount {
+              justify-content: right;
+            }
+
+            .data {
+              align-items: center;
+              text-transform: uppercase;
+
+              .move-down {
+                width: 20px;
+                height: 20px;
+                padding-right: 5px;
+              }
+
+              p {
+                margin: 0;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 35px;
+                color: #ababab;
+              }
+
+              .bnt-row-details {
+                width: 20px;
+                height: 20px;
+                right: 0;
+                top: calc(25% - 12px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .btn-logout {
+    display: none;
+  }
+  .icon {
+    transform: scale(1.2);
+    top: calc(50% - 10px);
+    right: calc(50% - 10px);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .mt-4 {
+    .logout {
+      height: 50px;
+
+      .icon {
+        height: 30px;
+        width: 20px;
+      }
+    }
+
+    .mb-5 {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    .tab {
+      padding: 0 30px 30px 30px;
+
+      .filter-container {
+        margin-bottom: 20px;
+
+        .costum-table {
+          .table-header {
+            justify-content: space-between;
+            .col-sm-6 {
+              display: none;
+            }
+            .col-sm-3 {
+              width: auto;
+            }
+          }
+
+          .table-row {
+            justify-content: space-between;
+            .col-lg-7 {
+              display: none;
+            }
+            .data {
+              width: auto;
+            }
+          }
+        }
+      }
+    }
+    .balance {
+      height: auto;
+      width: 58.33%;
+      .balance-widget {
+        .available-balance,
+        .current-balance {
+          width: 100%;
+          float: none;
+          border: none;
+          text-align: center;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .details {
+      display: flex;
+      align-items: center;
+      width: 65px;
+      height: 150px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .balance {
+    .balance-widget {
+      .available-balance,
+      .current-balance {
+        font-size: 30px;
+      }
+    }
+  }
+}
